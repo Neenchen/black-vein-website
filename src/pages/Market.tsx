@@ -19,7 +19,7 @@ import gravecaller from "../assets/items/the-gravecaller.png";
 
 type MarketItem = { name: string; price: string; note?: string; images?: string[] };
 const rewards = [["Daily login", "100"], ["First V Blood kill", "50"], ["PvP kill", "15"], ["Every 45 min played", "5"], ["Events & activities", "Variable"]];
-const weapons: MarketItem[] = [{ name: "Weapon exchange", price: "5 Epic Weapon Shards", note: "Trade for 1 Legendary weapon", images: [epicShard, gravecaller] }, { name: "Legendary weapon", price: "4,000", note: "Direct purchase", images: [gravecaller] }];
+const weapons: MarketItem[] = [{ name: "Weapon exchange", price: "5 Epic Weapon Shards", note: "Trade for 1 Legendary weapon", images: [gravecaller, epicShard] }, { name: "Legendary weapon", price: "4,000", note: "Direct purchase", images: [gravecaller] }];
 const premium: MarketItem[] = [{ name: "Onyx Tear", price: "600", images: [onyxTear] }, { name: "Cloaks & hats", price: "400", images: [immortalKingsCloak, topHat] }];
 const seeds: MarketItem[] = [{ name: "Ghost Shroom", price: "45", images: [ghostShroom] }, { name: "Plague Brier", price: "45", images: [plagueBrier] }, { name: "Corrupted Flower", price: "45", images: [corruptedFlower] }, { name: "Bleeding Heart", price: "45", images: [bleedingHeart] }, { name: "Blood Rose", price: "40", images: [bloodRose] }, { name: "Sacred Grapes", price: "60", images: [sacredGrape] }];
 const fish: MarketItem[] = [{ name: "Sage Fish", price: "45", images: [sageFish] }, { name: "Swamp Dweller", price: "45", images: [swampDweller] }, { name: "Corrupted Fish", price: "45", images: [corruptedFish] }, { name: "Golden River Bass", price: "45", images: [goldenRiverBass] }];

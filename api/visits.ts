@@ -1,21 +1,43 @@
+import type { IncomingMessage, ServerResponse } from "node:http";
+
 const workspace = process.env.COUNTER_API_WORKSPACE ?? "black-vein";
 const counterName = "website-visits";
 
-export default async function handler(request: Request): Promise<Response> {
-  if (request.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
+function sendJson(response: ServerResponse, status: number, body: Record<string, number | string>) {
+  response.statusCode = status;
+  response.setHeader("Content-Type", "application/json; charset=utf-8");
+  response.setHeader("Cache-Control", "no-store");
+  response.end(JSON.stringify(body));
+}
+
+export default async function handler(request: IncomingMessage, response: ServerResponse) {
+  if (request.method !== "GET") {
+    sendJson(response, 405, { error: "Method not allowed" });
+    return;
+  }
 
   const token = process.env.COUNTER_API_TOKEN;
-  if (!token) return Response.json({ error: "Counter is not configured" }, { status: 503 });
+  if (!token) {
+    sendJson(response, 503, { error: "Counter is not configured" });
+    return;
+  }
 
   try {
-    const response = await fetch("https://api.counterapi.dev/v2/" + workspace + "/" + counterName + "/up", {
+    const aborter = new AbortController();
+    const timeout = setTimeout(() => aborter.abort(), 8_000);
+    const counterResponse = await fetch("https://api.counterapi.dev/v2/" + workspace + "/" + counterName + "/up", {
       headers: { Authorization: "Bearer " + token },
+      signal: aborter.signal,
     });
-    const data = await response.json() as { value?: number; count?: number };
-    const views = data.value ?? data.count;
-    if (!response.ok || typeof views !== "number") return Response.json({ error: "Counter is unavailable" }, { status: 502 });
-    return Response.json({ views }, { headers: { "Cache-Control": "no-store" } });
+    clearTimeout(timeout);
+    const data = await counterResponse.json() as { value?: number; count?: number; data?: { value?: number; count?: number } };
+    const views = data.value ?? data.count ?? data.data?.value ?? data.data?.count;
+    if (!counterResponse.ok || typeof views !== "number") {
+      sendJson(response, 502, { error: "Counter is unavailable" });
+      return;
+    }
+    sendJson(response, 200, { views });
   } catch {
-    return Response.json({ error: "Counter is unavailable" }, { status: 502 });
+    sendJson(response, 502, { error: "Counter is unavailable" });
   }
 }

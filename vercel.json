@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/viewer-count", "destination": "/api/site-status" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

@@ -11,7 +11,7 @@ export default function Header() {
     <Navbar.Toggle aria-controls="main-navigation" /><Navbar.Collapse id="main-navigation"><Nav className="primary-nav align-items-lg-center">
       <Nav.Link as={NavLink} to="/" end><img src={homeIcon} className="nav-item-icon" alt="" />Home</Nav.Link>
       <NavDropdown title={<><span className="nav-icon" aria-hidden="true">📜</span>Rules</>} id="rules-navigation" menuVariant="dark">
-        <NavDropdown.Item as={Link} to="/rules#general"><span aria-hidden="true">✦</span> Server Rules</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/rules#general"><span aria-hidden="true">✦</span> General server rules</NavDropdown.Item>
         <NavDropdown.Item as={Link} to="/rules#pvp"><span aria-hidden="true">⚔</span> PvP & V Blood</NavDropdown.Item>
         <NavDropdown.Item as={Link} to="/rules#raids"><img src={siegeGolem} className="nav-dropdown-item-icon" alt="" /> Raid Rules</NavDropdown.Item>
         <NavDropdown.Item as={Link} to="/rules#chat"><span aria-hidden="true">☏</span> Chat & Reports</NavDropdown.Item>

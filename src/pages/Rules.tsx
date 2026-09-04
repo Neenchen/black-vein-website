@@ -62,5 +62,6 @@ export default function Rules() {
       <Col md={6} lg={4}><article className="feature-card rule-card"><h3>Reports</h3><ul><li>Open a Discord ticket for every report.</li><li>Provide video with the full context.</li><li>Short clips may be denied.</li><li>Admin decisions protect a healthy and fair server.</li></ul></article></Col>
       <Col md={6} lg={4}><article className="feature-card rule-card"><h3>Server moderation</h3><ul><li>Rules not listed here may still be handled by the admin team.</li><li>Repeated problems or behaviour that does not fit the community can lead to removal from the server.</li></ul></article></Col>
     </Row></Container></section>
+    <section className="section pt-0"><Container><div className="rules-events-note"><div className="eyebrow">Server activities</div><h2>More events will be posted soon.</h2><p>Event details, start times and rewards will be announced on Discord.</p></div></Container></section>
   </div>;
 }

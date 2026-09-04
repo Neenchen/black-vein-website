@@ -19,7 +19,7 @@ const pvp: Rule[] = [
   { title: "Tier 2 Rifts", points: ["T2 Rifts are Free-for-All.", "When T2 activates, leave any T1 Rift within 30 seconds.", "Do not repeatedly gatekeep a Rift without participating in its objective.", "You may leave briefly to heal or reset before returning."] },
 ];
 const raids: Rule[] = [
-  { title: "Raid schedule", points: ["Raid window: every day, 20:00–22:00 server time.", "Offline Protection: on during weekday raid hours.", "Offline Protection: off on weekends."] },
+  { title: "Raid schedule", points: ["Raid window: every day, 20:00–22:00 GMT+2.", "Offline Protection: on during weekday raid hours.", "Offline Protection: off on weekends."] },
   { title: "Offline protection", points: ["The entire clan must be offline for 15 minutes before it activates.", "Offline raids are FFA.", "A clan doing an offline raid can be counter-raided."] },
   { title: "Shard limit", points: ["Each squad may hold only 1 Shard.", "If a squad holds more than 1 Shard, all of that squad's Shards will be reset.", "Shard holders are not protected on weekdays."] },
   { title: "Defence abuse", points: ["No excessive lighting that can cause server lag.", "Avoid excessive expensive structures or decorations.", "No dummies to charge ultimates.", "No vermin nests to summon Nibbles for healing."] },

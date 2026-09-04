@@ -21,7 +21,7 @@ const pvp: Rule[] = [
 const raids: Rule[] = [
   { title: "Raid schedule", points: ["Raid window: every day, 20:00–22:00 GMT+2.", "Offline Protection: on during weekday raid hours.", "Offline Protection: off on weekends."] },
   { title: "Offline protection", points: ["The entire clan must be offline for 15 minutes before it activates.", "Offline raids are FFA.", "A clan doing an offline raid can be counter-raided."] },
-  { title: "Shard limit", points: ["Each squad may hold only 1 Shard.", "If a squad holds more than 1 Shard, all of that squad's Shards will be reset.", "Shard holders are not protected on weekdays."] },
+  { title: "Shard limit", points: ["Each squad may hold only 1 Shard.", "If a squad holds more than 1 Shard, all of that squad's Shards will be reset.", "Shard holders can be attacked or raided regardless of level difference."] },
   { title: "Defence abuse", points: ["No excessive lighting that can cause server lag.", "Avoid excessive expensive structures or decorations.", "No dummies to charge ultimates.", "No vermin nests to summon Nibbles for healing."] },
   { title: "Raid conduct", points: ["Do not run away with loot during a raid.", "Do not dump items to intentionally despawn them.", "Do not interfere with an active raid, camp its location or counter-raid the involved parties.", "Do not avoid being raided by launching consecutive raids yourself."] },
   { title: "Lower-level attackers", points: ["If a lower-level player raids you, you may raid them back.", "This is limited to one raid window."] },

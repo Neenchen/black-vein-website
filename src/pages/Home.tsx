@@ -10,7 +10,7 @@ function ViewerCounter() {
   const [views, setViews] = useState<number | null>(null);
   useEffect(() => {
     let mounted = true;
-    fetch("/api/visits").then((response) => response.ok ? response.json() : null).then((data: { views?: number } | null) => {
+    fetch("/api/site-status").then((response) => response.ok ? response.json() : null).then((data: { views?: number } | null) => {
       if (mounted && typeof data?.views === "number") setViews(data.views);
     }).catch(() => undefined);
     return () => { mounted = false; };

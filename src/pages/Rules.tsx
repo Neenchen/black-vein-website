@@ -7,7 +7,6 @@ type Rule = { title: string; points: string[] };
 const general: Rule[] = [
   { title: "Teaming", points: ["PvE teaming is allowed.", "PvP teaming of any kind is prohibited.", "Reports need full-context evidence; each case is judged individually."] },
   { title: "5th clan member", points: ["One registered substitute is allowed per clan.", "Never more than 4 clan members online at once.", "The 5th member cannot join during raid time or be in another clan.", "Notify an admin before a wipe or when the designated player changes."] },
-  { title: "Shards & progression", points: ["Each squad may hold exactly 1 Shard.", "Extra Shards will be reset.", "Do not manipulate gear progression to farm or raid lower-geared players."] },
   { title: "Camping", points: ["No griefing outside player bases.", "No Waygate camping.", "No Hotzone camping."] },
   { title: "Names, streams & privacy", points: ["Names must be appropriate and easy to moderate.", "Stream sniping is forbidden; reports require a kill-time video and proof of viewing.", "Doxxing results in an immediate permanent ban."] },
   { title: "Respect staff", points: ["Treat staff and players with respect.", "Question a decision only with new evidence in a ticket.", "Insults, threats and repeated disruptive behavior can result in a permanent ban."] },
@@ -22,7 +21,7 @@ const pvp: Rule[] = [
 const raids: Rule[] = [
   { title: "Raid schedule", points: ["Raid window: every day, 20:00–22:00 server time.", "Offline Protection: on during weekday raid hours.", "Offline Protection: off on weekends."] },
   { title: "Offline protection", points: ["The entire clan must be offline for 15 minutes before it activates.", "Offline raids are FFA.", "A clan doing an offline raid can be counter-raided."] },
-  { title: "Gear & Shards", points: ["PvP Gear Score limits also apply to raids.", "The squad's highest Gear Score counts.", "Shard holders are not protected on weekdays."] },
+  { title: "Shard limit", points: ["Each squad may hold only 1 Shard.", "If a squad holds more than 1 Shard, all of that squad's Shards will be reset.", "Shard holders are not protected on weekdays."] },
   { title: "Defence abuse", points: ["No excessive lighting that can cause server lag.", "Avoid excessive expensive structures or decorations.", "No dummies to charge ultimates.", "No vermin nests to summon Nibbles for healing."] },
   { title: "Raid conduct", points: ["Do not run away with loot during a raid.", "Do not dump items to intentionally despawn them.", "Do not interfere with an active raid, camp its location or counter-raid the involved parties.", "Do not avoid being raided by launching consecutive raids yourself."] },
   { title: "Lower-level attackers", points: ["If a lower-level player raids you, you may raid them back.", "This is limited to one raid window."] },

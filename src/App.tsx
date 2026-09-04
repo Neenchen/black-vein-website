@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Rules from "./pages/Rules";
 import Market from "./pages/Market";
 import Map from "./pages/Map";
+import Events from "./pages/Events";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -30,6 +31,7 @@ export default function App() {
     <Route path="/pulse" element={<Pulse />} /><Route path="/contact" element={<Contact />} />
     <Route path="/rules" element={<Rules />} /><Route path="/market" element={<Market />} />
     <Route path="/map" element={<Map />} />
+    <Route path="/events" element={<Events />} />
     <Route path="*" element={<NotFound />} />
   </Routes></main><Footer /></div>;
 }
